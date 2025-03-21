@@ -1,0 +1,30 @@
+[project]
+name = "workflow-automation-backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.11",
+    "grpcio>=1.71.0",
+    "grpcio-tools>=1.71.0",
+    "httpx>=0.28.1",
+    "psycopg2-binary>=2.9.10",
+    "pytest>=8.3.5",
+    "ray>=2.43.0",
+    "redis>=5.2.1",
+    "rq>=2.1.0",
+    "sqlmodel>=0.0.24",
+    "uvicorn[standard]>=0.34.0",
+]
+
+[tool.basedpyright]
+typeCheckingMode = "standard"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files= "test_*.py"
+python_functions = "test_*"
+markers = [
+    "asyncio: Mark test as asynchronous.",
+]

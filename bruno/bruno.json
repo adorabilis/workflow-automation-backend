@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "workflow-automation",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

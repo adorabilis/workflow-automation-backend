@@ -1,0 +1,53 @@
+# Version control
+.git
+.gitignore
+.github/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Development environments
+.env
+.venv
+env/
+venv/
+ENV/
+.python-version
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Docker-related
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+
+# Documentation
+README.md
+LICENSE
+docs/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Local development
+.DS_Store
+node_modules/
+data/
+uploads/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/

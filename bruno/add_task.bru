@@ -1,0 +1,47 @@
+meta {
+  name: add_task
+  type: http
+  seq: 0
+}
+
+post {
+  url: http://localhost:8000/workflows/{workflow_id}/tasks/
+  body: json
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Description"
+    },
+    "order": {
+      "title": "Order",
+      "type": "integer"
+    },
+    "execution_type": {
+      "$ref": "#/$defs/TaskType",
+      "default": "sync"
+    },
+    "parameters": {
+      "default": {},
+      "title": "Parameters",
+      "type": "object"
+    }
+  }
+}

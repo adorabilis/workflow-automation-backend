@@ -1,0 +1,13 @@
+meta {
+  name: list_workflows
+  type: http
+  seq: 0
+}
+
+get {
+  url: http://localhost:8000/workflows/?skip=number&limit=number
+}
+
+headers {
+  content-type: application/json
+}

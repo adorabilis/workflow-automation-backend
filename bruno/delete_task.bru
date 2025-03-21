@@ -1,0 +1,13 @@
+meta {
+  name: delete_task
+  type: http
+  seq: 0
+}
+
+delete {
+  url: http://localhost:8000/workflows/{workflow_id}/tasks/{task_id}
+}
+
+headers {
+  content-type: application/json
+}
