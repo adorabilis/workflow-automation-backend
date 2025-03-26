@@ -150,25 +150,25 @@ pip install -r requirements.txt
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
 │  REST API   │     │ gRPC Service│     │ Ray Executor│
-│  (FastAPI)  │     │             │     │ (Optional)  │
+│  (FastAPI)  │     │             │     │  (Optional) │
 └──────┬──────┘     └──────┬──────┘     └───────┬─────┘
        │                   │                    │
-       └──────────┬────────┴─────────────┬──────┘
+       └──────────┬────────┘             ┌──────┘
                   │                      │
          ┌────────▼─────────┐   ┌────────▼──────────┐
          │ Database Service │◄──│ Execution Service │
          └────────┬─────────┘   └───────────────────┘
                   │
-         ┌────────▼─────────┐
-         │      Redis       │
-         └────────┬─────────┘
+         ┌────────▼─────────┐   ┌───────────────────┐
+         │      Redis       │◄──│  Worker Service   │
+         └────────┬─────────┘   └───────────────────┘
                   │
          ┌────────▼─────────┐
          │   PostgreSQL     │
          └──────────────────┘
 ```
 
-The project follows a **modular architecture** with these key components:
+The project follows a modular architecture with these key components:
 
 ### API Layer
 - **REST API (FastAPI)** for workflow and task management
