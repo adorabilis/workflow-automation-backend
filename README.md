@@ -55,7 +55,7 @@ docker-compose run --rm grpc_server --use-ray
 - **Create Workflow:** ```POST /workflows/```
 
   Request body:
-  ```
+  ```json
   {
     "name": "Data Processing Workflow",
     "description": "Process and transform data files"
@@ -63,7 +63,7 @@ docker-compose run --rm grpc_server --use-ray
   ```
 
   Response:
-  ```
+  ```json
   {
     "name": "Data Processing Workflow",
     "description": "Process and transform data files",
@@ -138,8 +138,8 @@ You may need to install dependencies first:
 
 ```bash
 # Create a virtual environment
-python3 -m venv myenv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
